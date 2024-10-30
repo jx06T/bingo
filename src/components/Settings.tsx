@@ -63,8 +63,8 @@ function Settings() {
         <div>
             <button onClick={() => setShowSettings(!showSettings)} className=" fixed right-2 top-2 w-10 h-10 text-center"><MaterialSymbolsSettingsOutlineRounded className=" text-4xl cursor-pointer"></MaterialSymbolsSettingsOutlineRounded></button>
             {showSettings &&
-                <div onClick={() => setShowSettings(false)} className=" fixed left-0 right-0 top-0 bottom-0 flex justify-center items-center z-30">
-                    <div className=" pointer-events-auto p-3 px-4 rounded-lg border-[2px] settings w-[max(70%,18rem)] h-[max(70%,18rem)] bg-stone-200">
+                <div onClick={(e) => setShowSettings(false)} className=" fixed left-0 right-0 top-0 bottom-0 flex justify-center items-center z-30">
+                    <div onClick={(e) => e.stopPropagation()} className=" pointer-events-auto p-3 px-4 rounded-lg border-[2px] settings w-[max(70%,18rem)] h-[max(70%,18rem)] bg-stone-200">
                         <div className=" flex justify-between">
                             <h1 className=" text-2xl  underline">Settings</h1>
                             <button onClick={() => setShowSettings(false)} className=" text-2xl  underline"><MaterialSymbolsCancelOutlineRounded className=" text-2xl -mr-2 -mt-3  "></MaterialSymbolsCancelOutlineRounded></button>
