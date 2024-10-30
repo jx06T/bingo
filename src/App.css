@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shippori-antique-b1-regular {
+  font-family: "Shippori Antique B1", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,.root{
+  font-family: "Shippori Antique B1", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ma-shan-zheng-regular {
+  font-family: "Ma Shan Zheng", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.cards.g-auto.s-max {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 230px);
+  gap: 6px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cards.g-fixed.s-max {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cards.g-auto.s-full {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 190px);
+  grid-template-rows: repeat(auto-fit, auto);
+  gap: 6px;
+  justify-content: center;
+}
+
+.cards.g-fixed.s-full {
+  display: grid;
+  max-height: 96vh;
+
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(5, auto);
+  gap: 6px;
+
+  justify-content: center;
+}
+
+.cards.g-auto.s-max.i-1-1 .card,
+.cards.g-fixed.s-max.i-1-1 .card {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+
+.cards.g-auto.s-full.i-1-1 .card,
+.cards.g-fixed.s-full.i-1-1 .card {
+  aspect-ratio: 1 / 1;
+  height: 100%;
+}
+
+.cards.g-auto.s-max.i-4-3 .card,
+.cards.g-fixed.s-max.i-4-3 .card {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+}
+
+.cards.g-auto.s-full.i-4-3 .card,
+.cards.g-fixed.s-full.i-4-3 .card {
+  aspect-ratio: 4 / 3;
+  height: 100%;
+}
+
+.cards.g-auto.s-max.i-16-9 .card,
+.cards.g-fixed.s-max.i-16-9 .card {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.cards.g-auto.s-full.i-16-9 .card,
+.cards.g-fixed.s-full.i-16-9 .card {
+  aspect-ratio: 16 / 9;
+  height: 100%;
+}
+
+.cards.g-fixed.s-full.i-4-3 {
+  margin-left: 3%;
+}
+
+.cards.g-fixed.s-full.i-1-1 {
+  margin-left: 5%;
+}
+
+.cards.g-fixed.s-full.i-16-9 {
+  margin-left: 1%;
+}
+
+.glass {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px); /* 兼容 Safari */
+  transform: translate3d(0, 0, 0); /* 强制硬件加速 */
+  box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.07),
+    0 10px 10px rgba(15, 88, 197, 0.25);
+}
+
+.glass-2 {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px); /* 兼容 Safari */
+  transform: translate3d(0, 0, 0); /* 强制硬件加速 */
+  box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.07),
+    0 10px 10px rgba(15, 88, 197, 0.25);
+}
+
+.bgi {
+  background-image: url("ttt.png");
+  /* background-size: cover; */
+  background-size: 100% 105%;
+  /* background-position: 0px -280px; */
+  background-position: 0px -15px;
 }

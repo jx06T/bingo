@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["es2021", "dom", "es6"],
+    "jsx": "preserve", // 或根据需要选择 "react", "react-jsx", "react-jsxdev"
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*",
+    "src/global.d.ts" // 包含的文件或文件夹
+  ],
+  "exclude": [
+    "node_modules" // 排除的文件或文件夹
+  ]
+}
