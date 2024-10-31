@@ -61,7 +61,7 @@ function Card({ state, imgPath, describe, name }: ExtendedCardFormat) {
                         />
                     </div>
                     <div className={`${showText ? " opacity-100" : " opacity-0"} sm:overflow-y-auto transition-all duration-300 h-full w-full py-1 flex flex-col justify-start items-center `}>
-                        <h1 className="w-full mb-1 text-center text-3xl md:text-4xl lg:text-5xl font-medium ">{name}</h1>
+                        <h1 className="w-full mb-3 text-center text-3xl md:text-4xl lg:text-5xl font-medium ">{name}</h1>
                         <div className="space-y-3 text-lg md:text-2xl lg:text-3xl ">
                             <hr />
                             <pre className="w-full text-wrap break-words whitespace-pre-line">{describe.ch}</pre>
