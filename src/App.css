@@ -223,17 +223,20 @@ body,
   @apply rounded-none justify-center items-center;
 }
 
-.describe .bgi::-webkit-scrollbar {
-  display: none;
-}
-
 .describe .bgi {
   @apply h-full p-0 m-0 w-full;
 }
 
 .describe.show .bgi {
-  scrollbar-width: none;
   @apply p-4 rounded-md w-[max(85%,18rem)] max-h-[90vh] flex-col md:flex-row flex justify-center items-center;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 .describe button {
@@ -251,4 +254,3 @@ body,
 .describe.show .card-img {
   @apply my-auto p-0 md:max-w-[55%] md:mr-4 min-h-[30%] w-full h-fit;
 }
-

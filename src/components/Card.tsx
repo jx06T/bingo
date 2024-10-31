@@ -38,8 +38,8 @@ function Card({ state, imgPath, describe, name }: ExtendedCardFormat) {
 
                 <div onClick={handleClickSH} className={` opacity-0 hover:opacity-100 transition-all duration-500 w-full h-full glass-3 absolute big-text text-slate-200 pl-3`}>
                 </div>
-                <div className={` ${state.opened ? " opacity-100 pointer-events-none" : " opacity-0 pointer-events-none"} transition-all duration-500 w-[80%] h-[80%] rounded-br-full glass absolute big-text text-slate-200 pl-3`}>
-                    <strong className=" -ml-2 md:-ml-0 md:-mt-3 block">{state.number}</strong>
+                <div className={` ${state.opened ? " opacity-100 pointer-events-none" : " opacity-0 pointer-events-none"} transition-all duration-500 w-[80%] h-[80%] max-w-fit rounded-br-full glass absolute big-text text-slate-200 pl-3`}>
+                    <strong className=" -ml-2 md:-ml-0 md:-mt-3 block mr-12">{state.number}</strong>
                 </div>
 
                 <img
@@ -60,9 +60,9 @@ function Card({ state, imgPath, describe, name }: ExtendedCardFormat) {
                             className=" w-full rounded-md h-full object-cover"
                         />
                     </div>
-                    <div className={`${showText ? " opacity-100" : " opacity-0"} overflow-y-auto transition-all duration-300 h-full w-full py-1 flex flex-col justify-between items-center`}>
-                        <div className="space-y-3 text-sm md:text-xl">
-                            <h1 className="w-full mb-1 text-center text-3xl font-medium">{name}</h1>
+                    <div className={`${showText ? " opacity-100" : " opacity-0"} overflow-y-auto transition-all duration-300 h-full w-full py-1 flex flex-col justify-around items-center`}>
+                        <div className="space-y-3 text-sm md:text-2xl lg:text-3xl mt-20 ">
+                            <h1 className="w-full mb-1 text-center md:text-4xl lg:text-5xl font-medium -mt-16 ">{name}</h1>
                             <hr />
                             <pre className="w-full text-wrap break-words whitespace-pre-line">{describe.ch}</pre>
                             <hr />
@@ -80,9 +80,9 @@ function Card({ state, imgPath, describe, name }: ExtendedCardFormat) {
                     </div>
                     <button
                         onClick={handleClickOP}
-                        className="right-3 top-4 absolute text-2xl transition-transform duration-300 hover:scale-110"
+                        className="right-5 top-6 absolute text-2xl transition-transform duration-300 hover:scale-110"
                     >
-                        <MaterialSymbolsCancelOutlineRounded className="text-3xl -mr-2 -mt-3" />
+                        <MaterialSymbolsCancelOutlineRounded className="text-3xl -mr-3 -mt-4" />
                     </button>
                 </div>
             </div>
