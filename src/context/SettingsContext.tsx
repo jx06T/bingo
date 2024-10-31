@@ -19,7 +19,7 @@ const generateTable = (): StateFormat[] => {
 }
 
 export const SettingsProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [settings, setSettings] = useState<SettingsFormat>({ init: true, grid: "auto", size: "full", aspectRatio: "1-1", table: generateTable() });
+  const [settings, setSettings] = useState<SettingsFormat>({ init: true, grid: "fixed", size: "max", aspectRatio: "3-4", table: generateTable() });
 
   useEffect(() => {
     const initialSettings = localStorage.getItem('bingo-settings');

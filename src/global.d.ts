@@ -3,7 +3,7 @@ interface SettingsFormat {
     init?: boolean,
     grid: "auto" | "fixed",
     size: "full" | "max",
-    aspectRatio: "auto" | "1-1",
+    aspectRatio: "auto" | "1-1" | "3-4" | "4-3" | "16-9",
     table: StateFormat[],
 }
 
