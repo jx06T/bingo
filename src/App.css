@@ -228,7 +228,7 @@ body,
 }
 
 .describe.show .bgi {
-  @apply p-4 rounded-md w-[max(85%,18rem)] max-h-[85vh] flex-col md:flex-row md:flex justify-center items-center;
+  @apply p-4 rounded-md w-[max(90%,18rem)] max-h-[88vh] flex-col sm:flex-row sm:flex justify-center items-center;
 }
 
 * {
@@ -252,5 +252,5 @@ body,
 }
 
 .describe.show .card-img {
-  @apply md:my-auto p-0 md:max-w-[55%] md:mr-4 md:min-h-[30%] max-h-[80%] w-full h-full md:h-fit;
+  @apply sm:my-auto p-0 sm:max-w-[55%] sm:mr-4 sm:min-h-[30%] max-h-[80%] w-full h-full sm:h-fit;
 }
