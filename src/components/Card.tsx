@@ -71,7 +71,7 @@ function Card({ state, imgPath, describe, name }: ExtendedCardFormat) {
                             <pre className="w-full text-wrap break-words whitespace-pre-line">{describe.jp}</pre>
                         </div>
 
-                        <div className=" my-3 p-2 w-24 h-24 md:w-40 md:h-40 lg:w-52 lg:h-52">
+                        <div className=" mt-10 p-2 w-24 h-24 md:w-40 md:h-40 lg:w-52 lg:h-52">
                             <div className="mb-8 p-5 bg-slate-400 w-full h-full aspect-square-j rounded-full big-text text-center font-extrabold border-0 border-slate-200 flex justify-center items-center">
                                 <span>
                                     {state.number}
