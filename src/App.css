@@ -217,7 +217,7 @@ body,
   left: 0;
   bottom: 0;
   right: 0;
-  height: 96%;
+  height: 100%;
   width: 100%;
   overflow: auto;
   @apply rounded-none justify-center items-center p-0;
@@ -228,7 +228,7 @@ body,
 }
 
 .describe.show .bgi {
-  @apply p-4 rounded-md w-[max(85%,18rem)] max-h-[90vh] flex-col md:flex-row md:flex justify-center items-center;
+  @apply p-4 rounded-md w-[max(85%,18rem)] max-h-[85vh] flex-col md:flex-row md:flex justify-center items-center;
 }
 
 * {
