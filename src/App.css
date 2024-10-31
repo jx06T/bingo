@@ -242,3 +242,18 @@ body,
 .describe.show .card-img {
   @apply sm:my-auto p-0 sm:max-w-[55%] sm:mr-4 sm:min-h-[30%] max-h-[80%] w-full h-full sm:h-fit;
 }
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #2c353a; /* 主要颜色 */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
