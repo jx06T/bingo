@@ -61,7 +61,7 @@ function Card({ state, imgPath, describe, name }: ExtendedCardFormat) {
                         />
                     </div>
                     <div className={`${showText ? " opacity-100" : " opacity-0"} sm:overflow-y-auto transition-all duration-300 h-full w-full py-1 flex flex-col justify-start items-center `}>
-                        <h1 className="bg-[#b3c9d8] rounded-lg py-3 w-full mb-0 mt-2 text-center text-3xl md:text-4xl lg:text-5xl font-medium ">
+                        <h1 className="bg-[#b3c9d8] px-2 rounded-lg py-3 w-full mb-0 mt-2 text-center text-3xl md:text-4xl lg:text-5xl font-medium ">
                             {name.split("\n").map((line, index) => (
                                 <React.Fragment key={index}>
                                     {line}
