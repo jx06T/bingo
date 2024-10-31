@@ -228,7 +228,7 @@ body,
 }
 
 .describe.show .bgi {
-  @apply p-4 rounded-md w-[max(90%,18rem)] max-h-[88vh] flex-col sm:flex-row sm:flex justify-center items-center;
+  @apply p-4 rounded-md w-[max(90%,18rem)] max-h-[86%] flex-col sm:flex-row sm:flex justify-center items-center;
 }
 
 * {
