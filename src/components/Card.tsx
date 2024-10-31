@@ -80,9 +80,9 @@ function Card({ state, imgPath, describe, name }: ExtendedCardFormat) {
                     </div>
                     <button
                         onClick={handleClickOP}
-                        className="right-5 top-6 absolute text-2xl transition-transform duration-300 hover:scale-110"
+                        className="right-1 top-2 absolute text-2xl transition-transform duration-300 hover:scale-110"
                     >
-                        <MaterialSymbolsCancelOutlineRounded className="text-3xl -mr-3 -mt-4" />
+                        <MaterialSymbolsCancelOutlineRounded className="text-3xl text-white" />
                     </button>
                 </div>
             </div>
