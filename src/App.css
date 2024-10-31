@@ -128,7 +128,7 @@ body,
 }
 
 .cards.g-fixed.s-full.i-16-9 {
-  @apply ml-[0%] md:ml-[0%];
+  @apply ml-[0%] 2xl:ml-[2%];
 }
 
 .cards.g-fixed.s-full.i-3-4 {
@@ -254,6 +254,6 @@ body,
 
 @keyframes spin {
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
