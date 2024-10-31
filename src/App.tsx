@@ -22,9 +22,9 @@ function App() {
       return () => window.removeEventListener("load", handleLoad);
     }
   }, [])
-  
+
   return (
-    <div className=' app bg-slate-100 w-full'>
+    <div className=' app bg-slate-200 w-full'>
       {showWiat && (
         <div className=' fixed top-0 bottom-0 left-0 right-0 w-full h-full bg-slate-100 z-50 flex justify-center items-center'>
           <div className='loader'></div>

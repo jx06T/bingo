@@ -38,7 +38,7 @@ function Card({ state, imgPath, describe, name }: ExtendedCardFormat) {
 
                 <div onClick={handleClickSH} className={` opacity-0 hover:opacity-100 transition-all duration-500 w-full h-full glass-3 absolute big-text text-slate-200 pl-3`}>
                 </div>
-                <div className={` ${state.opened ? " opacity-100 pointer-events-none" : " opacity-0 pointer-events-none"} transition-all duration-500 w-[80%] h-[80%] max-h-fit max-w-fit rounded-br-full glass absolute big-text text-slate-200 pl-3`}>
+                <div className={` ${state.opened ? " opacity-100 pointer-events-none" : " opacity-0 pointer-events-none"} transition-all duration-500 w-[80%] h-[80%] max-h-fit max-w-fit rounded-br-full glass absolute big-text text-blue-100 pl-3`}>
                     <strong className=" -ml-2 md:-ml-0 md:-mt-3 block mr-6 md:mr-12 mb-6">{state.number}</strong>
                 </div>
 
@@ -61,14 +61,21 @@ function Card({ state, imgPath, describe, name }: ExtendedCardFormat) {
                         />
                     </div>
                     <div className={`${showText ? " opacity-100" : " opacity-0"} sm:overflow-y-auto transition-all duration-300 h-full w-full py-1 flex flex-col justify-start items-center `}>
-                        <h1 className="w-full mb-3 text-center text-3xl md:text-4xl lg:text-5xl font-medium ">{name}</h1>
-                        <div className="space-y-3 text-lg md:text-2xl lg:text-3xl ">
-                            <hr />
-                            <pre className="w-full text-wrap break-words whitespace-pre-line">{describe.ch}</pre>
-                            <hr />
-                            <pre className="w-full text-wrap break-words whitespace-pre-line">{describe.en}</pre>
-                            <hr />
-                            <pre className="w-full text-wrap break-words whitespace-pre-line">{describe.jp}</pre>
+                        <h1 className="bg-[#b3c9d8] rounded-lg py-3 w-full mb-0 mt-2 text-center text-3xl md:text-4xl lg:text-5xl font-medium ">
+                            {name.split("\n").map((line, index) => (
+                                <React.Fragment key={index}>
+                                    {line}
+                                    <br />
+                                </React.Fragment>
+                            ))}
+                        </h1>
+                        <div className="text-xl md:text-3xl lg:text-4xl ">
+                            <hr className=" mt-6" />
+                            <pre className=" mt-3 w-full text-wrap break-words whitespace-pre-line">{describe.ch}</pre>
+                            {/* <hr /> */}
+                            {/* <pre className="w-full text-wrap break-words whitespace-pre-line">{describe.en}</pre> */}
+                            <hr className=" mt-6" />
+                            <pre className=" mt-3 w-full text-wrap break-words whitespace-pre-line">{describe.jp}</pre>
                         </div>
 
                         <div className=" mt-10 p-2 w-24 h-24 md:w-40 md:h-40 lg:w-52 lg:h-52">
@@ -83,7 +90,7 @@ function Card({ state, imgPath, describe, name }: ExtendedCardFormat) {
                         onClick={handleClickOP}
                         className="right-1 top-2 absolute text-2xl transition-transform duration-300 hover:scale-110"
                     >
-                        <MaterialSymbolsCancelOutlineRounded className="text-3xl md:text-4xl text-white" />
+                        <MaterialSymbolsCancelOutlineRounded className="text-4xl md:text-5xl text-white" />
                     </button>
                 </div>
             </div>

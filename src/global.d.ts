@@ -12,9 +12,9 @@ interface CardFormat {
     imgPath: string,
     name: string,
     describe: {
-        "en": string,
-        "ch": string,
-        "jp": string
+        en?: string,
+        ch: string,
+        jp: string
     }
 }
 
