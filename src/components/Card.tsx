@@ -38,8 +38,8 @@ function Card({ state, imgPath, describe, name }: ExtendedCardFormat) {
 
                 <div onClick={handleClickSH} className={` opacity-0 hover:opacity-100 transition-all duration-500 w-full h-full glass-3 absolute big-text text-slate-200 pl-3`}>
                 </div>
-                <div className={` ${state.opened ? " opacity-100 pointer-events-none" : " opacity-0 pointer-events-none"} transition-all duration-500 w-[80%] h-[80%] max-w-fit rounded-br-full glass absolute big-text text-slate-200 pl-3`}>
-                    <strong className=" -ml-2 md:-ml-0 md:-mt-3 block mr-12">{state.number}</strong>
+                <div className={` ${state.opened ? " opacity-100 pointer-events-none" : " opacity-0 pointer-events-none"} transition-all duration-500 w-[80%] h-[80%] max-h-fit max-w-fit rounded-br-full glass absolute big-text text-slate-200 pl-3`}>
+                    <strong className=" -ml-2 md:-ml-0 md:-mt-3 block mr-12 mb-6">{state.number}</strong>
                 </div>
 
                 <img
