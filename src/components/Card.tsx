@@ -70,12 +70,12 @@ function Card({ state, imgPath, describe, name }: ExtendedCardFormat) {
                             ))}
                         </h1>
                         <div className="text-lg md:text-xl lg:text-2xl xl:text-3xl ">
-                            <hr className=" mt-6" />
-                            <pre className=" mt-3 w-full text-wrap break-words whitespace-pre-line">{describe.ch}</pre>
-                            {/* <hr /> */}
-                            {/* <pre className="w-full text-wrap break-words whitespace-pre-line">{describe.en}</pre> */}
-                            <hr className=" mt-6" />
-                            <pre className=" mt-3 w-full text-wrap break-words whitespace-pre-line">{describe.jp}</pre>
+                            {Object.keys(describe).map(e => (
+                                <React.Fragment key={e}>
+                                    <hr className=" mt-6" />
+                                    <pre className=" mt-3 w-full text-wrap break-words whitespace-pre-line">{describe[e]}</pre>
+                                </React.Fragment>
+                            ))}
                         </div>
 
                         <div className=" mt-10 p-2 w-24 h-24 md:w-40 md:h-40 lg:w-52 lg:h-52">

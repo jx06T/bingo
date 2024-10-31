@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MaterialSymbolsCancelOutlineRounded, MaterialSymbolsSettingsOutlineRounded } from "./Icons";
+import { GrommetIconsGithub, MaterialSymbolsCancelOutlineRounded, MaterialSymbolsSettingsOutlineRounded } from "./Icons";
 import { useSettingsContext } from "../context/SettingsContext";
 
 function BtnPair({ text, thisKey, onClick, selected }: { thisKey: string, text: [string, string], onClick: Function, selected: string }) {
@@ -80,6 +80,10 @@ function Settings() {
                         </div>
                         <div className=" flex items-center mt-5 ">
                             <button onClick={() => setSettings({ ...settings, table: generateTable() })} className={` hover:scale-105 transition-transform border-2 border-red-600 hover:bg-red-300 h-8 rounded-full px-4 my-2 mx-2 }`}>Reassign numbers</button>
+                        </div>
+                        <div className=" w-full mt-4 text-end">
+
+                            <a className=" text-slate-600" href="https://github.com/jx06T/bingo"><GrommetIconsGithub className=" inline mr-2 text-2xl mb-1"></GrommetIconsGithub>1.0.2 - jx06T</a>
                         </div>
                     </div>
                 </div>

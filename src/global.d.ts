@@ -14,7 +14,8 @@ interface CardFormat {
     describe: {
         en?: string,
         ch: string,
-        jp: string
+        jp: string,
+        [key: string]: string | undefined
     }
 }
 

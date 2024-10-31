@@ -128,7 +128,7 @@ body,
 }
 
 .cards.g-fixed.s-full.i-16-9 {
-  @apply ml-[0%] 2xl:ml-[2%];
+  @apply ml-[0%] xl:ml-[1%] 2xl:ml-[2%];
 }
 
 .cards.g-fixed.s-full.i-3-4 {
