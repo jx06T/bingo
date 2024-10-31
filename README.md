@@ -20,7 +20,7 @@
 ![卡片](https://i.imgur.com/Zj6rIzi.png)
 
 
-## 卡片資料格式
+## 卡片資料格式（用於自行部署）
 ``` JSON
 {
     "title": "<標題>:string",
