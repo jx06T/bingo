@@ -8,7 +8,12 @@
   font-style: normal;
 }
 
-body,.root{
+#root {
+  width: 100vw;
+}
+
+body,
+#root {
   font-family: "Shippori Antique B1", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -22,7 +27,7 @@ body,.root{
 
 .cards.g-auto.s-max {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 230px);
+  grid-template-columns: repeat(auto-fit, clamp(80px, 20vw, 240px));
   gap: 6px;
   justify-content: center;
 }
@@ -36,9 +41,13 @@ body,.root{
 
 .cards.g-auto.s-full {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 190px);
+  max-height: 100vh;
+
+  grid-template-columns: repeat(auto-fit, clamp(80px, 20vw, 190px));
+  /* grid-template-rows: repeat(auto-fit, calc((100vh - 40px) / 5)); */
   grid-template-rows: repeat(auto-fit, auto);
   gap: 6px;
+
   justify-content: center;
 }
 
@@ -89,16 +98,56 @@ body,.root{
   height: 100%;
 }
 
+.cards.g-auto.s-max.i-3-4 .card,
+.cards.g-fixed.s-max.i-3-4 .card {
+  aspect-ratio: 3 / 4;
+  height: 100%;
+  /* width: 100%; */
+}
+
+.cards.g-auto.s-full.i-3-4 .card,
+.cards.g-fixed.s-full.i-3-4 .card {
+  aspect-ratio: 3 / 4;
+  /* width: 100%; */
+  height: 100%;
+}
+
+.cards.g-fixed.s-full.i-auto {
+}
+
 .cards.g-fixed.s-full.i-4-3 {
-  margin-left: 3%;
+  @apply ml-[0%] md:ml-[3%];
 }
 
 .cards.g-fixed.s-full.i-1-1 {
-  margin-left: 5%;
+  @apply ml-[0%] md:ml-[5%];
 }
 
 .cards.g-fixed.s-full.i-16-9 {
-  margin-left: 1%;
+  @apply ml-[0%] md:ml-[1%];
+}
+
+.cards.g-fixed.s-full.i-3-4 {
+  @apply ml-[0%] md:ml-[6%];
+}
+
+.cards.g-auto.s-full.i-auto {
+}
+
+.cards.g-auto.s-full.i-4-3 {
+  @apply ml-[1%] md:ml-[0%];
+}
+
+.cards.g-auto.s-full.i-1-1 {
+  @apply ml-[1%] md:ml-[0%];
+}
+
+.cards.g-auto.s-full.i-16-9 {
+  @apply ml-[0%] md:ml-[-1%];
+}
+
+.cards.g-auto.s-full.i-3-4 {
+  @apply ml-[-5%] md:ml-[-1%];
 }
 
 .glass {
@@ -125,4 +174,13 @@ body,.root{
   background-size: 100% 105%;
   /* background-position: 0px -280px; */
   background-position: 0px -15px;
+}
+
+.big-text {
+  font-size: clamp(1rem, min(10vh, 10vw), 7rem);
+  /* font-size: 14vh; */
+}
+
+.aspect-square-j {
+  aspect-ratio: 1 / 1;
 }
